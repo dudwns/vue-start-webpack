@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  }, // eslint는 전역 객체에 대해서 알고 있어야 한다.
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended"], // 추천 규칙들을 적용
+  "rules": {
+    "semi": ["error", "always"], // 세미콜론 유무 여부
+    "quotes": ["error", "double"], // "" '' 중 선택
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    ], // 태그의 닫는 괄호 줄바꿈 여부
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "void": "always",
+          "normal": "never",
+          "component": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }
+    ] // </>, <></> 여부
+  } // 규칙을 덮어씀
+}
