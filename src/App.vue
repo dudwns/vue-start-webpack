@@ -1,5 +1,5 @@
 <template>
-  <h1 v-if="msg" class="message" @click="log">
+  <h1>
     {{ msg }}
   </h1>
   <Hello />
