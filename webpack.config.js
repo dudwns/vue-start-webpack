@@ -29,7 +29,12 @@ module.exports = {
       },
       {
         test: /\.s?css$/, // s가 있거나 없거나 읽음
-        use: ["vue-style-loader", "css-loader", "sass-loader"], // 여러 개니까 배열로 명시, 순서 중요
+        use: [
+          "vue-style-loader",
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
+        ], // 여러 개니까 배열로 명시, 순서 중요
       },
     ],
   },
