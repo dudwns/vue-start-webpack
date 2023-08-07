@@ -19,6 +19,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/, // node_modules는 babel 변환에서 제외
+        use: "babel-loader"
+      },
+      {
         test: /\.vue$/, // .vue로 끝나는 파일의 유무를 확인. 정규 표현식으로 기입
         use: "vue-loader", // .vue 확장자 파일이 있으면 vue-loader라는 패키지의 도움을 받아서 해석한다.
       },
