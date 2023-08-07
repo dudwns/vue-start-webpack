@@ -13,6 +13,7 @@ module.exports = {
   entry: "./src/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/", // 빌드된 파일들을 루트 경로에서 접근
     clean: true, // 빌드할 때 dist라는 폴더를 삭제하고 결과를 재생성
   },
   module: {
@@ -36,4 +37,7 @@ module.exports = {
       ],
     }),
   ], // 플러그인 등록
+  devServer: {
+    historyApiFallback: true // SPA의 기본 페이지로 /index.html로 지정
+  }
 };
